@@ -85,17 +85,29 @@ app.post("/upload-pdf", upload.single("pdf"), async (req, res) => {
     }
   
     try {
-      // Directly send a placeholder response
-      res.send({ summary: "Debug: PDF uploaded successfully!" });
+      console.log("Starting PDF extraction...");
+      const pdfData = req.file.buffer;
+      const data = await pdfParse(pdfData);
+      console.log("PDF extracted successfully");
+  
+      const extractedText = data.text;
+      const customPrompt = req.body.customPrompt || "Summarize the following content:";
+      const prompt = `${customPrompt}\n\n${extractedText}`;
+  
+      console.log("Generating summary with Google AI...");
+      const summaryResponse = await model.generateContent(prompt);
+      const summarizedText = await summaryResponse.response.text();
+      console.log("Summary generated successfully");
+  
+      res.send({ summary: summarizedText });
     } catch (error) {
-      console.error("Error processing PDF:", error);
-      res.status(500).send("Failed to process PDF file.");
+      console.error("Error processing PDF or summarizing text:", error.message);
+      res.status(500).send("Failed to process PDF file or summarize text.");
     }
   });
-
   
 
-  
+
 app.get('/',(req,res)=>{
     res.send("Hello From Server")
   })
