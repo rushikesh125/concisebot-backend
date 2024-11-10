@@ -66,7 +66,10 @@ app.post("/upload-pdf", upload.single("pdf"), async (req, res) => {
     res.status(500).send("Failed to process PDF file or summarize text.");
   }
 });
-
+app.get('/',(req,res)=>{
+    res.send("Hello From Server")
+  })
+  
 app.post("/generate", async (req, res) => {
   try {
     const prompt = req.body.prompt;
