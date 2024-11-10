@@ -1,0 +1,946 @@
+
+
+Dr. BABASAHEB AMBEDKAR MARATHWADA UNIVERSITY, 
+CHHATRAPATI SAMBHAJINAGAR (M.S.) 
+ 
+ 
+EBL Project Report on 
+“ANALYSIS OF 350 KWP SOLAR PLANT IN MIT 
+CHHA. SAMBHAJINAGAR’’ 
+ 
+Submitted by 
+             ABHISHEK KARBHARI WALHEKAR [71] 
+               VISHAL MURLIDHAR GAIKWAD [76] 
+ 
+Under the Guidance of  
+PROF. S. N. PAWAR 
+In partial fulfillment of the award of 
+Bachelor of Technology (Electrical Engineering) 
+ 
+DEPARTMENT OF ELECTRICAL ENGINEERING 
+MAHARASHTRA INSTITUTE OF TECHNOLOGY 
+Chhatrapati Sambhajinagar (M.S.) 
+[2024-25] 
+
+ii  
+ 
+
+G.S MANDALS  
+MAHARASHTRA INSTITUTE OF TECHNOLOGY 
+ (an Autonomous institute) 
+ DEPARTMENT OF ELECTRICAL ENGINEERING 
+ 
+ 
+EBL project Report on 
+“ANALYSIS OF 350 KWP SOLAR PLANT IN MIT CHHA. 
+SAMBHAJINAGAR ’’ 
+ 
+ 
+Submitted by 
+                               ABHISHEK KARBHARI WALHEKAR (71) 
+                               VISHAL MURLIDHAR GAIKWAD (76) 
+ 
+ 
+Under the Guidance of  
+Prof. S. N. Pawar   
+ 
+In partial fulfillment of the award of   
+Bachelor of Technology (Electrical Engineering)  
+ 
+DEPARTMENT OF ELECTRICAL ENGINEERING  
+MAHARASHTRA INSTITUTE OF TECHNOLOGY 
+Chhatrapati Sambhajinagar (M.S.) 
+[2024-25] 
+
+ii 
+ 
+CERTIFICATE 
+ 
+This is to verify that the EBL project report entitled “Analysis of 350KWP solar plant in MIT 
+Chha. Sambhajinagar’ ’submitted by Abhishek   Karbhari   Walhekar   and   Vishal 
+Murlidhar Gaikwad is the Bonafide work completed under my supervision and guidance in 
+partial  fulfillment  for  the  award of  Bachelor  of  Technology  (Electrical  Engineering)  of  Dr. 
+Babasaheb Ambedkar Marathwada University, Chha. Sambhajinagar (M.S). 
+ 
+Place: Chhatrapati Sambhajinagar 
+Date:  
+ 
+ 
+ 
+ 
+ 
+Dr. Mrs. S. M. Badave 
+Head 
+Electrical Engineering Department 
+Prof. S. N. Pawar 
+Guide 
+Electrical Engineering Department 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Dr. N. G. Patil 
+Director 
+Maharashtra Institute of Technology, Chhatrapati Sambhajinagar 
+ 
+ 
+ 
+ 
+ 
+ 
+
+iii 
+ 
+ 
+ACKNOWLEDGMENT 
+I feel great pleasure to express my gratitude to the people who have been instrumental in the 
+successful completion of this project. 
+I am highly indebted to Prof. S. N. Pawar for his guidance and constant support. I can't thank 
+enough  for  his tremendous  support  and  help.  I  feel  motivated  and  encouraged  every  time  I 
+attended  his meeting.  Without  his encouragement  and  guidance  this  project  would  not  have 
+materialized. I take this opportunity to convey our sincere thanks to Dr. S. M. Badave, Head of 
+Electrical  Engineering  Department,  for  providing  guidance  and  wholehearted  cooperation.  I 
+am  thankful  to Dr.  N.  G.  Patil,  Director,  Maharashtra  Institute  of  Technology, Chha. 
+Sambhajinagar for his encouraging attitude. I also extend my genuine thanks to all the staff of 
+Electrical Engineering Department for providing valuable guidance. 
+Finally, yet importantly, I would like to express my heartfelt thanks to my beloved parents for 
+their blessings, and my all friends and all others for their help, backing and good wishes Finally, 
+I would  like to thank everybody who was important to the successful realization of In- plant 
+training report, as well as expressing my apology that I could not mention personally one by 
+one. 
+ 
+ Abhishek karbhari walhekar -71 
+Vishal Murlidhar Gaikwad -76 
+ 
+ 
+ 
+ 
+ 
+ 
+
+iv 
+ 
+ABSTRACT 
+This analysis focuses on the 350 kW solar plant installed at MIT Chha. Sambhajinagar College, 
+aiming  to  assess  its  performance,  economic  viability,  and  educational  impact.  As  renewable 
+energy  plays  a  crucial  role  in  addressing  global  environmental  challenges,  this  solar  plant 
+serves as a pioneering example of how educational institutions can harness solar technology to 
+meet their energy needs while promoting sustainability. The study begins with a comprehensive 
+overview  of  the  plant's  design,  including  the selection  of  high-efficiency  photovoltaic  (PV) 
+panels and advanced inverter technology, which are essential for optimizing energy production.  
+Operationally, the analysis examines key performance metrics such as energy yield, capacity 
+factor,  and  performance  ratio,  which  provide  insights  into  the  effectiveness  of  the  plant  in 
+generating electricity compared to its design specifications. The environmental benefits of the 
+plant are highlighted, including  its role  in reducing carbon emissions and contributing to the 
+college's  sustainability  goals.  An  economic  assessment  evaluates  the  initial  investment, 
+ongoing   maintenance   costs,   and   savings   on   electricity   bills,   allowing   for   a  thorough 
+understanding of the plant's financial performance over its lifespan.  
+Additionally, the solar plant acts as a living laboratory for students, offering practical learning 
+opportunities in renewable energy technologies, system management, and data analysis. This 
+educational aspect is crucial for preparing students for careers in the growing field of renewable 
+energy.  The  findings  from  this  analysis  underscore  the  importance  of  integrating  renewable 
+energy systems within academic institutions, demonstrating their potential to foster innovation, 
+environmental  stewardship,  and  energy independence.  Ultimately,  the  350  kW  solar  plant  at 
+MIT Chha. Sambhajinagar College not only serves as a model for sustainable energy solutions 
+but also contributes to the broader movement towards a greener future. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+                                                 
+
+v 
+ 
+                                                         INDEX 
+                              
+                                                        
+  
+Contents 
+Page No. 
+  Certificate ii 
+  Acknowledgement iii 
+  Abstract iv 
+  List of Figure vi 
+  List of Table vii 
+  List of Graph viii 
+1  
+INTRODUCTION 
+ 
+ 1.1 Introduction 1 
+2  
+ LITERATURE SURVEY 
+ 
+ 2.1 Brief Review: Analysis of 350 KWP Solar Plant in MIT Chh. 
+Sambhajinagar 
+3 
+ 2.2  Economic Viability of Amorphous Silicon (a-Si) Solar 
+Technology 
+6 
+ 2.3 Inverter and Its Role 9 
+3  
+SYSTEM MODELING  
+ 
+ 3.1 System Block diagram 11 
+ 3.2 Module String plan 12 
+ 3.3 Inverter Block diagram 16 
+ 3.4 Flowchart 17 
+4  
+PERFORMANCE ANALYSIS 
+ 
+ 4.1 Analysis of solar plant & its bill amount data  18 
+5  
+FUTURE SCOPE  
+20 
+6  
+CONCLUSION  
+ 
+  References 23 
+      
+ 
+ 
+ 
+ 
+ 
+
+vi 
+ 
+List of Figure 
+ 
+Figure  
+Illustration  
+Page  
+2.1 B.TECH Building Solar Plant 5 
+2.2 Reference Image of Marathwada Building 7 
+2.3 Visit at site with Guide for an Inspection 10 
+3.1 Single line Dig For 11 KV Power Distribution system 11 
+3.2 System Block Diagram 12 
+3.3 Reference Image of Engineering Plant 13 
+3.4 Reference Image of B.TECH Building 14 
+3.5 Reference image of Nursing Plant 15 
+3.6 Block Digram of Inverter 16 
+3.7 Flowchart of Solar Energy  17 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+vii 
+ 
+List of Table 
+ 
+Table  
+Illustration  
+Page  
+3.1 Name plate Data of String 12 
+3.2 Name Plate data of MASDAR Solar Panel 13 
+3.3 Name Plate Data of Masdar Solar Panel 14 
+3.4 Name Plate Data of WAREE Solar Panel 15 
+3.5 Name Plate Data of inverter 16 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+viii 
+ 
+List of Graphs 
+ 
+Graphs 
+Illustration  
+Page  
+4.1  Analysis between Units Consumed & Billing amount of MSEB 18 
+4.2 Analysis  between  Units  Generated  &  Cost  Saved  by  MIT Institute 
+Solar Plant. 
+18 
+ 
+ 
+ 
+
+ 
+1 
+ 
+1. INTRODUCTION 
+The 350 kW solar plant at MIT College represents a significant step toward sustainable energy 
+solutions  and  environmental  stewardship  within  the  academic  institution.  As  the  world 
+grapples  with  the  challenges  posed  by  climate  change  and  the depletion  of  fossil  fuels, 
+educational  institutions  are  increasingly  taking  the  lead  in  adopting  renewable  energy 
+technologies. This solar plant not only serves to meet the energy demands of the college but 
+also  acts  as  a  powerful  educational  tool  for  students  and  the  community.  The  installation 
+comprises high-efficiency solar photovoltaic (PV) panels strategically positioned to maximize 
+sunlight exposure, thereby optimizing energy production throughout the year. 
+The  analysis  of  this  solar  plant  encompasses several  critical  aspects,  including  its  design, 
+operational efficiency, and economic viability. Initially, the choice of technology, such as the 
+type of solar panels and inverters used, plays a crucial role in determining the overall energy 
+output  and  return  on  investment.  Furthermore,  the  geographical  location  of  MIT  College 
+provides a favorable climate for solar energy generation, with abundant sunshine and minimal 
+shading, which is essential for maximizing energy capture.  
+Operational  metrics,  such  as  energy  yield,  capacity  factor,  and  performance  ratio,  will  be 
+meticulously  evaluated  to  assess  how  effectively  the  plant  meets  its  projected  goals. 
+Additionally,  an  economic  analysis  will  explore  the  initial  capital  investment,  maintenance 
+costs, and potential savings on electricity bills, as well as the environmental benefits achieved 
+by reducing carbon emissions.  
+Moreover, the plant serves as a  living  laboratory  for students, offering  hands-on experience 
+in   renewable   energy   technologies,   system   design,   and   performance   monitoring.   By 
+incorporating real-time data analysis and energy  management systems, students can engage 
+in  research  projects  that  contribute to their  understanding  of  solar  energy  dynamics  and  its 
+implications for future energy systems.  
+ 
+ 
+
+ 
+2 
+ 
+In summary,  the  analysis  of  the  350  kW  solar  plant  at  MIT  College  will  provide  valuable 
+insights into the practical applications of solar technology in educational settings, highlighting 
+the   intersection   of   sustainability,   technology,   and   education.   This   initiative   not  only 
+contributes  to  the  college's  energy  independence  but  also  reinforces  its  commitment  to 
+fostering a culture of innovation and responsibility toward a sustainable future. 
+Installing a new solar plant involves setting up solar panels that capture sunlight and convert 
+it into electricity. The process starts with assessing the site to determine the best location for 
+the  panels.  Next,  the  solar  panels  are  installed  on  rooftops  of  main  B.Tech  Building.These 
+panels are then connected to an inverter, which changes the solar energy into usable electricity. 
+The system  is  linked to the  institute’s electrical  grid, allowing  it to power buildings and 
+facilities. Once set up, the solar plant operates with minimal maintenance, providing clean and 
+renewable energy for years to come. 
+Total  solar  power  required  to obtain  load  demand  is  350KWP  .  They  are Manufactured by 
+MASDAR  PV  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+3 
+ 
+2. LITERATURE SURVEY 
+2.1 Brief Review: Analysis of 350 KWP Solar Plant in MIT Chh. Sambhajinagar: 
+The growing demand for sustainable energy solutions has led to the increased deployment of 
+solar  power  systems. The  350  KWP  solar  plant  at  MIT  Chh. Sambhajinagar,  represents  a 
+significant step toward sustainable energy solutions in the region. This facility not only aims 
+to  reduce dependency on  traditional  fossil  fuels  but  also  serves  as  a  practical  model  for 
+educational purposes. 
+ 
+Solar energy is the energy we get from the sun. It is a clean, renewable source of power that 
+can help reduce our reliance on fossil fuels, which are harmful to the environment. Here’s a 
+simple breakdown of how solar energy works and its main components: 
+How Solar Energy Works: 
+When  sunlight  hits  a  solar  panel,  it  is  converted  into  electricity.  This  process  involves  a 
+technology called photovoltaic (PV) cells. Here’s how it works step by step: 
+Sunlight Absorption: Solar panels are made up of many smaller units called solar cells. These 
+cells are made of materials like silicon that can absorb sunlight. 
+Electricity Generation: When the sunlight strikes the solar cells, it excites the electrons in the 
+silicon, causing them to move. This movement creates an electric current. 
+Inverter Role: The electric current produced by the solar cells is direct current (DC). However, 
+most  homes  and  businesses  use  alternating  current (AC).  An  inverter  converts  the  DC  into 
+AC, making it usable for everyday appliances. 
+ 
+2.1.1 Types of Solar Panels: 
+There are mainly three types of solar panels: 
+Monocrystalline Panels: Made  from a single crystal structure, these panels are efficient and 
+take up less space. They are usually more expensive. 
+Polycrystalline Panels: Made from multiple crystal structures, these panels are less expensive 
+but also slightly less efficient than monocrystalline panels. 
+
+ 
+4 
+ 
+Thin-Film Panels/Amorphous silicon panels: These are  lightweight and  flexible  but usually 
+have  the  lowest  efficiency.  They  are  often  used  in  specific  applications  like  building-
+integrated photovoltaics. 
+Here  we  are  using Amorphous  silicon  (a-Si)  technology,  It is  a  type  of  thin-film  solar  cell 
+technology  that  uses  non-crystalline  silicon  to  convert  sunlight  into  electricity.  Here’s  a 
+detailed explanation of it. 
+ 
+2.1.2 Structure of Amorphous silicon : 
+Amorphous silicon is a form of silicon that lacks a long-range crystalline structure. In contrast 
+to crystalline silicon, which has a well-defined lattice arrangement, a-Si has a random atomic 
+arrangement. 
+This allows for the production of thin  films of silicon, which can be deposited onto various 
+substrates like glass, plastic, or metal. 
+How Does It Work? 
+Light Absorption: When sunlight hits the solar cell, it gets absorbed. The energy from the light 
+excites electrons in the silicon, freeing them from their atoms. 
+Electricity  Generation: As  these  free  electrons  move, they  create  an  electric  current,  which 
+can be used to power homes and devices. 
+The  manufacturing  process  typically  involves  chemical  vapor  deposition  (CVD),  where 
+silicon  gas  is  deposited  onto  a  substrate  to  form  a  thin  film.  This  process  is  less  energy-
+intensive compared to the production of crystalline silicon cells. 
+Key Features: 
+Thin and Flexible: a-Si solar cells are very thin, often just a few micrometers thick. This makes 
+them lightweight and flexible, allowing them to be used in a variety of applications. 
+Lower  Efficiency: They  usually  convert  less  sunlight  into  electricity  than  traditional 
+crystalline silicon panels, typically around 6% to 10%. 
+Good in Heat: a-Si panels work well in hot temperatures, maintaining their efficiency better 
+than some other types of panels.  
+
+ 
+5 
+ 
+2.1.3 Advantages of Amorphous Silicon Technology: 
+Cost-Effective: The production process for a-Si panels is less expensive due to lower material 
+requirements and simpler manufacturing techniques. 
+Versatility: A-Si panels can be applied to a variety of surfaces, including curved or flexible 
+substrates,  which  opens  up  new  installation  possibilities  (e.g.,  on  vehicles  or  building-
+integrated photovoltaics). 
+Performance in Low Light: A-Si technology performs relatively well in low-light conditions 
+and partial shading, making it suitable for areas with less consistent sunlight. 
+Reduced  Material  Use: Because  they  require  much  less  silicon  than  crystalline  panels,  a-Si 
+cells can be produced with less environmental impact. 
+Better  Performance  at  High  Temperatures: A-Si  cells  can  maintain  higher  efficiency  levels 
+under hot conditions, making them suitable for warmer climates. 
+Amorphous  silicon  (a-Si)  technology  offers  a  unique  way  to  harness  solar  energy.  While  it 
+has some drawbacks like lower efficiency, its cost-effectiveness, flexibility, and performance 
+in various light conditions make it a valuable option for many uses in renewable energy. As 
+technology advances, a-Si solar cells could play a bigger role in the future of solar energy. 
+ 
+ 
+ 
+ 
+ 
+ 
+Fig 2.1: B.TECH Building Solar Plant 
+
+ 
+6 
+ 
+2.2 Economic Viability of Amorphous Silicon (a-Si) Solar Technology: 
+What is Economic Viability?  
+Economic viability means how cost-effective a technology is, including how much money it 
+can save, how quickly it pays for itself, and whether it’s a good long-term investment. 
+Key Factors in Economic Viability for a-Si Solar Cells: 
+Lower Initial Costs:  
+Cheaper to Make:  Amorphous silicon panels cost less to produce than traditional solar panels 
+because they use less silicon and are easier to make. 
+Easy to Install : These panels are lightweight and flexible, which can lower installation costs 
+since they can be placed on different surfaces without needing heavy equipment. 
+Energy Savings : 
+Lower  Electricity  Bills :  By  generating  their  own  electricity,  users  can  significantly  reduce 
+their energy bills. This means more money stays in their pockets over time. 
+Payback Period : The money spent on the panels  can often be recovered within a few  years 
+through these savings, making a-Si solar systems financially attractive. 
+Growing Demand : 
+Interest in Renewable Energy : As more people and businesses want sustainable energy, the 
+demand  for solar technology  is  increasing. This could  lead to more investment in a-Si solar 
+systems. 
+Stable Energy Costs :  
+Avoiding  Price  Increases :  Solar  energy  provides  a  consistent  source of  electricity,  helping 
+users  avoid  the  ups  and  downs  of  fossil  fuel  prices.  This  stability  makes  financial  planning 
+easier 
+
+ 
+7 
+ 
+The  economic  viability  of  amorphous  silicon  solar  technology  is  promising.  Its  lower 
+production costs, potential energy  savings, and government  incentives  make  it an attractive 
+choice.  While  challenges  like  lower  efficiency  and  market  perception  exist,  the  growing 
+interest in renewable energy and the long-term financial benefits mean a-Si solar systems are 
+a good option for many people. As technology improves, these systems are likely to become 
+even more financially appealing. 
+The economic assessment shows that the solar installation has a favorable payback period due 
+to  decreasing  solar  panel  costs  and  available  government  incentives.  Long-term  savings  on 
+energy  bills  are  projected to  benefit  the  institute  significantly,  allowing  for  reinvestment  in 
+educational initiatives. 
+ 
+Fig 2.2: Reference Image of Marathwada Building 
+ 
+ 
+ 
+ 
+
+ 
+8 
+ 
+Economic Analysis: 
+Cost-Benefit  Analysis:  Calculate  the  total   investment  cost  (including   installation  and 
+maintenance)  against the  savings  generated  from  reduced  electricity  bills  and  any  available 
+incentives or rebates. 
+Payback Period: Determine the payback period, which is the time it takes for the savings to 
+equal the initial investment. This is calculated as: 
+Payback Period=Annual Savings/Total Investment 
+Environmental Impact Assessment: 
+Carbon Offset : Estimate the reduction  in  carbon emissions achieved  by using  solar energy 
+instead of fossil fuels. This can be done using standard conversion factors. 
+Life  Cycle  Assessment (LCA): Evaluate  the  environmental  impact  of  the  solar  panels  and 
+system components throughout their life cycle, from manufacturing to disposal. 
+The  analysis  of  the  350  KWP  solar  plant  at  MIT, highlights  its  effectiveness  in  energy 
+generation, economic benefits, and positive environmental impact. As a pioneering project in 
+Sambhajinagar,  it  serves  as  a  model  for  future  solar  initiatives,  promoting  both  educational 
+and sustainability goals in the region. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+9 
+ 
+2.3 Inverter and Its Role: 
+What is an Inverter? 
+An inverter is a crucial component in a solar power system. Its primary role is to convert the 
+direct  current  (DC)  electricity  generated  by  solar  panels  into  alternating  current  (AC) 
+electricity, which is used to power homes, businesses, and connect to the grid. 
+ Role of the Inverter in the Solar Plant 
+In the 350 KWP solar plant at MIT Chha, the inverter performs several essential functions: 
+DC  to  AC  Conversion: Solar  panels  generate  electricity  in  the  form  of  DC.  The  inverter  
+transforms this into AC electricity, which is suitable for everyday use and can be fed into the 
+electrical grid. 
+Maximizing  Energy  Production : The  inverter  optimizes  the  power  output  from  the  solar 
+panels. It uses Maximum Power Point Tracking (MPPT) technology to ensure that the system 
+operates at its most efficient point, adapting to changes in sunlight and temperature. 
+Monitoring   Performance : The   inverter   includes   monitoring   features   that   track   the 
+performance  of  the  solar  system.  This  allows  operators  to  see  how  much  energy  is  being 
+produced, identify any issues, and maintain the system effectively. 
+Grid  Connection : The  inverter  enables  the  solar  plant  to  connect  to  the  electrical  grid.  It 
+ensures that the electricity  fed  into the grid  meets regulatory  standards and  is synchronized 
+with grid voltage and frequency. 
+Safety Features : Inverters, including the Fronius model, come equipped with safety features 
+that  protect  both  the  solar  system  and  the  electrical  grid.  This  includes  anti-islanding 
+protection, which prevents the inverter from feeding power back into the grid during a power 
+outage. 
+ 
+ 
+
+ 
+10 
+ 
+In the 350 KWP solar plant at MIT , the inverter plays a vital role in converting DC electricity 
+from the  solar panels  into AC electricity  for use and grid  connection. Its advanced features 
+enhance energy production,  monitor performance, and ensure safety,  making  it an  essential 
+component of the solar power system. By optimizing the output and providing valuable data, 
+the inverter contributes significantly to the plant’s overall efficiency  and  effectiveness  in 
+harnessing solar energy. 
+ 
+ 
+Fig 2.3 : Visit at site with Guide for an Inspection 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+11 
+ 
+3. SYSTEM MODELING 
+3.1 System Block Diagram: 
+Fig 3.1: Single line Dig For 11 KV Power Distribution system 
+ 
+  
+
+ 
+12 
+ 
+ 
+ 
+3.2  Module String Plan: 
+ 
+                                  Fig 3.2: System Block Diagram 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Table 3.1: Name plate Data of String  
+Number of modules in a string                
+ 
+6 
+Number of strings in an inverter 
+ 
+129 
+Number of modules per inverter 
+ 
+774 
+Number of inverters 
+ 
+1 
+Total number of modules 
+ 
+774 
+Wattage of each module 
+ 
+130 Wp 
+String Voc 
+ 
+864 V 
+String Isc 
+ 
+1.40 A 
+String Vmp 
+ 
+672 V 
+String Imp 
+ 
+1.15 A 
+
+ 
+13 
+ 
+Location 1:  
+Name of Building : Engineering Building 
+Year of Installation : 2014 
+Date of Visit 
+Gained points:  
+Total generation capacity 100 KWp 
+No of solar panels 772 
+No of inverter  
+Manufactured by MASDAR * PV 
+Inclination angle 18
+0 - 
+20
+0 
+Maximum Power 135W 
+Open Circuit Volatage  140.5V 
+Short Circuit Current 1.43A 
+Maximum Power Volatge  109.52V 
+Maximum Power Current 1.23A 
+Weight 30 Kg 
+Dimension  4.26*3.6 FT. 
+Table 3.2: Name Plate data of MASDAR Solar Panel 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Fig 3.3: Reference Image of Engineering Plant  
+
+ 
+14 
+ 
+Location 2:  
+Name of Building : BTECH  Building 
+Year of Installation : 2013 
+Date of Visit :09 / 08 / 2024 
+Gained points:  
+Total generation capacity 100 KWp 
+No of solar panels 772 
+No of inverter  
+Manufactured by MASDAR * PV 
+Inclination angle 18
+0 - 
+20
+0 
+Maximum Power 133.74 W (3%) 
+Operating Voltage  111.35V 
+Operating Current 1.20A 
+Maximum Power Voltage  109.52V 
+Maximum Power Current 1.23A 
+Weight 30 Kg 
+Dimension  4.26*3.6 FT. 
+Table 3.3: Name Plate Data of Masdar Solar Panel 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Fig 3.4: Reference Image of B.TECH Building 
+
+ 
+15 
+ 
+Location 3:  
+Name of Building : Nursing / Electrical dept Building 
+Year of Installation : 2018 
+Date of Visit :20 / 09 / 2024 
+Gained points:  
+Total generation capacity 150 KWp 
+No of solar panels 460 
+No of inverter 6 
+Manufactured by WAREE 
+Inclination angle 18
+0 - 
+20
+0 
+Maximum Power 315 W  
+Open Circuit Volatage 45.25 
+Short Circuit Current 9.29 
+Maximum Power Voltage  36.75 V 
+Maximum Power Current 8.58A 
+Weight 29.5 Kg 
+Dimension  6.43*3.2 FT 
+Table 3.4: Name Plate Data of WAREE Solar Panel 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Fig 3.5: Reference image of Nursing Plant  
+
+ 
+16 
+ 
+3.3. Inverter Block diagram: 
+ 
+ 
+Fig 3.6: Block Digram of Inverter 
+ 
+ 
+ 
+Table 3.5: Name Plate Data of inverter 
+ 
+Non Isolated Inverter 
+Model No.  Fronius IG Plus 150V-3 
+Ser. No.  23241588 
+Pmax 22500 W / 25000 W 
+Safety Class 1 
+Power factor 0.85 
+UAC normal 230V/50HZ  
+IAC Maximum 17.4 A 
+UDC Maximum 600V 
+IDC Maximum 55.6/83.4 
+Fac nom 50 / 60 HZ 
+
+ 
+17 
+ 
+3.4 Flowchart: 
+ 
+ 
+ 
+ 
+ 
+                                     Fig 3.7: Flowchart of Solar Energy  
+
+ 
+18 
+ 
+4. PERFORMANCE ANALYSIS 
+4.1 Analysis of solar plant & its bill amount data: 
+ 
+Graph 4.1: Analysis between Units Consumed & Billing amount of MSEB 
+ 
+Graph 4.2: Analysis between Units Generated & Cost Saved by MIT Institute Solar Plant 
+JULYAUGUSTSEPTEMBER
+UNITS CONSUMED & BILL AMOUNT 
+UNITSBILL AMOUNT
+JULYAUGUSTSEPTEMBER
+UNITS GENERATED & COST SAVED 
+UNITS GENERATEDCOST SAVED
+12,
+62,620
+/
+-
+ 
+14,64,150/
+-
+ 
+15,31,
+940
+/
+-
+ 
+67,678 KWH
+ 
+81,175 KWH
+ 
+80,156 KWH
+ 
+3
+,03,285
+/
+-
+ 
+3,52,395
+/
+-
+ 
+3,77,760
+/
+-
+ 
+20,219 KWH
+ 
+23,493 KWH
+ 
+25,184 
+KWH
+ 
+
+ 
+19 
+ 
+We have collected the past three months elecrticity bill of our institute to analyze units demand 
+monthly as well as solar plant of MIT (350 KWP). 
+ From first graph we have shown the analysis between units consumed montly and total bill 
+amount the data obatined is of July , August and September. This graph held the overall data 
+of Electricity Board (MSEB) and MIT’s Solar Power Plant of past three months as mentioned 
+in graph. Here, in this chart we get data only about the units consumed from the Electricity 
+generation board and billing amount.  
+Here, 
+ In the July month Units consumed are :- 67,678 KWH and Billing amount is 12,62,620/- For 
+August month Units consumed are :- 81,175 KWH and Billing amount is 14,64,150/-  and for 
+September month Units consumed are :- 80,156 KWH and Billing amount is 15,31,940/-  
+The  Second  graph illustrate  details  about Overall  data  of  MIT’s Solar  Plant  Energy 
+Generation. It gives  information about Units Generated and Cost Saved   through this solar 
+plant   
+In  the  July  month  Units  Generated  are  :- 20,219  KWH  and Cost  Saved is  3,03,285 /- For 
+August  month  Units generated are  :- 23,493 KWH  and Cost  Saved is 3,52,395 /-  and  for 
+September month Units generated are :- 25,184 KWH and Cost Saved is 3,77,760/-  
+Now, taking a dig about institutes solar energy generation and consumption. The institute has 
+installed the grid  for its own, it is connected to different buildings  in  its own the grid starts 
+from  taking  supply  from  Electricity  boards  (feeder) now  the  supply  is  given  to  Institutes 
+Transformer  of  11kv/415v it  covers  all  the buildings present in the  institute has  sanctioned 
+load of 1430 KV . So to satisfy this load demand institude has decided to install its own solar 
+energy erection of 350 KWP.The institute has its total demand of 1430 KW. So the solar plant 
+can satisfy approximately about 25% of institutes total load demand. 
+ 
+  
+
+ 
+20 
+ 
+5. FUTURE SCOPE 
+Future Opportunities of Solar Plant Expansion at the Institute: 
+Expanding  the  institute’s  solar  plant  from  350  kW  to 650  kW  opens  up  many  exciting 
+possibilities  for  the  future.  This  larger  solar  setup  will  help  the institute  save  more  money, 
+produce  cleaner  energy,  and  even  provide  learning  opportunities.  Here  are  some  key  areas 
+where this solar expansion can benefit the institute and community in simple terms: 
+1. More Energy Independence: With a bigger solar plant, the institute can produce more of its 
+own electricity rather than relying heavily on outside sources. This helps avoid high electricity 
+bills and makes the institute less dependent on external power, especially during times of high 
+electricity demand or power cuts. 
+2.  Bigger  Savings  on  Electricity  Costs:  By  generating  more  solar  power  on  campus,  the 
+institute can reduce the amount it spends on electricity  bills. This  means that money  can be 
+saved and used for other important things, like improving facilities or supporting students and 
+research. 
+3. Positive Impact on the Environment: Using more solar power instead of traditional energy 
+sources cuts down on carbon emissions, which are harmful to the environment. By expanding 
+the solar plant, the institute contributes to cleaner air and helps fight climate change. This step 
+aligns with global goals for a greener and more sustainable future. 
+4. Learning and Research Opportunities for Students: A larger solar plant on campus becomes 
+a great tool for learning. Students in fields like engineering, environmental science, and energy 
+studies can observe and study how the solar plant works in real-time. They can  learn about 
+solar technology, monitor the plant’s energy production, and explore ways to make solar 
+power even more efficient. 
+ 
+ 
+
+ 
+21 
+ 
+5. Room for New Technologies: As the institute expands its solar capacity, it can also consider 
+adding  advanced  technologies,  like  energy  storage  systems  (batteries  that  store  extra  solar 
+energy) and smart software that tracks energy production and usage. These tools can make the 
+solar plant work even better, allowing the institute to store solar energy for cloudy days and 
+nighttime, making the system more reliable. 
+6. Engaging the Community: A larger solar plant is not only beneficial to the institute but can 
+also inspire the community. By hosting events, tours, or educational workshops, the institute 
+can show others the benefits of solar energy. This can encourage more people to consider solar 
+power for their own homes or businesses, helping the wider community embrace renewable 
+energy. 
+In simple terms, the solar expansion will bring long-term benefits by saving money, protecting 
+the  environment,  and  enriching  educational  experiences.  This  future-focused  approach  will 
+strengthen the institute’s role as a leader in sustainability and show that switching to cleaner, 
+renewable energy is both practical and rewarding. 
+  
+
+ 
+22 
+ 
+CONCLUSION 
+ MIT solar plant survey is a detailed study that helps us understand how solar energy benefits 
+the  institute.  Through  this  survey,  we’re  learning  about  the  advantages  of  solar  energy, 
+especially in terms of saving money by reducing electricity costs. 
+In  this  survey,  we've  collected  important  data  on  the  solar  plant’s  components,  like  the 
+inverters, solar panels, and other materials used in the project. This includes information on 
+the  exact  number  of  inverters  and  solar  panels  needed  to  run  a  350  kW  solar  plant  at  the 
+institute. With this data, we get a clear picture of how much energy the solar plant can produce 
+and  the setup required  for it to  work efficiently.Additionally, we’re gaining  insights  into 
+people’s general opinions and attitudes toward the solar plant. This helps us understand how 
+well the project is supported and the level of interest in renewable energy. 
+In the end, this survey provides us with useful knowledge about how solar energy benefits the 
+institute,  both  financially  and  environmentally.  It  also  gives  us  a  solid  foundation  to 
+successfully analyze and possibly improve the solar plant, making sure it operates at its best. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+23 
+ 
+References 
+1. U.S. Department of Energy. Solar Power: The Basics. Energy.gov. 2021. 
+2.  National  Renewable  Energy  Laboratory  (NREL).  Cost  Savings  from  Solar  Energy  in 
+Institutions. NREL.gov. 2020.  
+3. Environmental Protection Agency. The Environmental Benefits of Solar Power. EPA.gov. 
+2023. 
+4.  Intergovernmental  Panel  on  Climate  Change.  Renewable  Energy  for  Climate  Change 
+Mitigation. IPCC.ch. 2022.  
+5. National Renewable Energy Laboratory (NREL). Educational Benefits of Solar Power for 
+Students. NREL.gov. 2021.  
+6. Solar Energy Industries Association (SEIA). Solar in Schools: Enhancing STEM Education. 
+SEIA.org. 2022.  
+7. International Energy Agency. Energy Storage and Solar Power Integration. IEA.org. 2023.  
