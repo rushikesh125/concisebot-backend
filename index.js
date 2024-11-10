@@ -139,50 +139,44 @@ app.use(
 );
 
 const upload = multer({
-  storage: multer.diskStorage({
-    destination: (req, file, cb) => cb(null, '/tmp'),
-    filename: (req, file, cb) => cb(null, file.originalname),
-  }),
-  limits: { fileSize: 10 * 1024 * 1024 },
-});
+    storage: multer.diskStorage({
+      destination: (req, file, cb) => cb(null, '/tmp'),
+      filename: (req, file, cb) => cb(null, file.originalname),
+    }),
+    limits: { fileSize: 10 * 1024 * 1024 },
+  });
 
 // Endpoint to handle PDF upload, text extraction, and summarization
 app.post("/upload-pdf", upload.single("pdf"), async (req, res) => {
-  if (!req.file) {
-    return res.status(400).send("No file uploaded.");
-  }
-
-  try {
-    console.log("Starting PDF extraction...");
-
-    // Isolated PDF parsing in a separate try-catch block
-    let extractedText;
-    try {
-      const pdfData = req.file.buffer;
-      const data = await pdfParse(pdfData);
-      extractedText = data.text;
-      console.log("PDF extracted successfully");
-    } catch (parseError) {
-      console.error("Error during PDF parsing:", parseError.message);
-      return res.status(500).send("Failed to parse PDF file.");
+    if (!req.file) {
+      return res.status(400).send("No file uploaded.");
     }
-
-    // Generate summary using Google Generative AI
-    const customPrompt = req.body.customPrompt || "Summarize the following content:";
-    const prompt = `${customPrompt}\n\n${extractedText}`;
-
-    console.log("Generating summary with Google AI...");
-    const summaryResponse = await model.generateContent(prompt);
-    const summarizedText = await summaryResponse.response.text();
-    console.log("Summary generated successfully");
-
-    res.send({ summary: summarizedText });
-  } catch (error) {
-    console.error("Error processing PDF or summarizing text:", error.message);
-    res.status(500).send("Failed to process PDF file or summarize text.");
-  }
-});
-
+  
+    try {
+      console.log("Starting PDF extraction...");
+  
+      // Read the file from /tmp directory using fs.readFileSync
+      const pdfData = fs.readFileSync(path.join('/tmp', req.file.originalname));
+      const data = await pdfParse(pdfData);
+      const extractedText = data.text;
+  
+      console.log("PDF extracted successfully");
+  
+      const customPrompt = req.body.customPrompt || "Summarize the following content:";
+      const prompt = `${customPrompt}\n\n${extractedText}`;
+  
+      console.log("Generating summary with Google AI...");
+      const summaryResponse = await model.generateContent(prompt);
+      const summarizedText = await summaryResponse.response.text();
+      console.log("Summary generated successfully");
+  
+      res.send({ summary: summarizedText });
+    } catch (error) {
+      console.error("Error processing PDF or summarizing text:", error.message);
+      res.status(500).send("Failed to process PDF file or summarize text.");
+    }
+  });
+  
 // Test endpoint
 app.get('/', (req, res) => {
   res.send("Hello From Server");
