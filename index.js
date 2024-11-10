@@ -39,43 +39,63 @@ const upload = multer({
     }),
     limits: { fileSize: 10 * 1024 * 1024 },
   });
-  
+
 
 // Endpoint to handle PDF upload, text extraction, and summarization
+// app.post("/upload-pdf", upload.single("pdf"), async (req, res) => {
+    
+//   if (!req.file) {
+//     return res.status(400).send("No file uploaded.");
+//   }
+
+//   try {
+//     // Extract text from PDF
+//     const pdfData = req.file.buffer;
+//     const data = await pdfParse(pdfData);
+//     const extractedText = data.text;
+
+//     const customPrompt = req.body.customPrompt;
+//     console.log(customPrompt);
+
+//     // Save extracted text to a file (optional)
+//     const outputPath = path.join(__dirname, "output.txt");
+//     fs.writeFileSync(outputPath, extractedText, "utf-8");
+
+//     // Use the model to generate a summary of the text
+//     const prompt = `${
+//       customPrompt
+//         ? `${customPrompt} from following content`
+//         : "Summarize the following content:"
+//     }\n\n${extractedText}`;
+//     const summaryResponse = await model.generateContent(prompt);
+
+//     const summarizedText = await summaryResponse.response.text();
+
+//     res.send({ summary: summarizedText });
+//   } catch (error) {
+//     console.error("Error processing PDF or summarizing text:", error);
+//     res.status(500).send("Failed to process PDF file or summarize text.");
+//   }
+// });
+
+
 app.post("/upload-pdf", upload.single("pdf"), async (req, res) => {
-  if (!req.file) {
-    return res.status(400).send("No file uploaded.");
-  }
+    if (!req.file) {
+      return res.status(400).send("No file uploaded.");
+    }
+  
+    try {
+      // Directly send a placeholder response
+      res.send({ summary: "Debug: PDF uploaded successfully!" });
+    } catch (error) {
+      console.error("Error processing PDF:", error);
+      res.status(500).send("Failed to process PDF file.");
+    }
+  });
 
-  try {
-    // Extract text from PDF
-    const pdfData = req.file.buffer;
-    const data = await pdfParse(pdfData);
-    const extractedText = data.text;
+  
 
-    const customPrompt = req.body.customPrompt;
-    console.log(customPrompt);
-
-    // Save extracted text to a file (optional)
-    const outputPath = path.join(__dirname, "output.txt");
-    fs.writeFileSync(outputPath, extractedText, "utf-8");
-
-    // Use the model to generate a summary of the text
-    const prompt = `${
-      customPrompt
-        ? `${customPrompt} from following content`
-        : "Summarize the following content:"
-    }\n\n${extractedText}`;
-    const summaryResponse = await model.generateContent(prompt);
-
-    const summarizedText = await summaryResponse.response.text();
-
-    res.send({ summary: summarizedText });
-  } catch (error) {
-    console.error("Error processing PDF or summarizing text:", error);
-    res.status(500).send("Failed to process PDF file or summarize text.");
-  }
-});
+  
 app.get('/',(req,res)=>{
     res.send("Hello From Server")
   })
