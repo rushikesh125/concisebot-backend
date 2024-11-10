@@ -26,10 +26,20 @@ app.use(
   })
 );
 
+// const upload = multer({
+//   storage: multer.memoryStorage(),
+//   limits: { fileSize: 10 * 1024 * 1024 },
+// });
+
+
 const upload = multer({
-  storage: multer.memoryStorage(),
-  limits: { fileSize: 10 * 1024 * 1024 },
-});
+    storage: multer.diskStorage({
+      destination: (req, file, cb) => cb(null, '/tmp'),
+      filename: (req, file, cb) => cb(null, file.originalname),
+    }),
+    limits: { fileSize: 10 * 1024 * 1024 },
+  });
+  
 
 // Endpoint to handle PDF upload, text extraction, and summarization
 app.post("/upload-pdf", upload.single("pdf"), async (req, res) => {
@@ -69,7 +79,7 @@ app.post("/upload-pdf", upload.single("pdf"), async (req, res) => {
 app.get('/',(req,res)=>{
     res.send("Hello From Server")
   })
-  
+
 app.post("/generate", async (req, res) => {
   try {
     const prompt = req.body.prompt;
